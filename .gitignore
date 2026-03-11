@@ -1,54 +1,140 @@
-# Dependencies
-node_modules/
-package-lock.json
+# FireWatch .gitignore
 
-# Environment variables
+# ==========================================
+# Dependencies
+# ==========================================
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+/.pnp
+.pnp.js
+
+# ==========================================
+# Environment Variables (NEVER COMMIT!)
+# ==========================================
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+backend/.env
+frontend/.env
 
-# Production build
+# ==========================================
+# Production Builds
+# ==========================================
+frontend/build/
+backend/dist/
 build/
 dist/
 
+# ==========================================
+# Uploaded Files (User Content)
+# ==========================================
+backend/uploads/*
+!backend/uploads/.gitkeep
+uploads/*
+
+# ==========================================
 # Logs
-logs
+# ==========================================
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# Uploads
-backend/uploads/*
-!backend/uploads/.gitkeep
-
-# Database
-*.db
-*.sqlite
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Testing
+# ==========================================
+# Testing & Coverage
+# ==========================================
 coverage/
-.nyc_output/
+*.lcov
+.nyc_output
 
-# Misc
-*.pem
-.cache
-.env.backup
-.eslintcache
+# ==========================================
+# OS Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# IDE / Editor Files
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# ==========================================
+# Temporary Files
+# ==========================================
+*.tmp
+*.temp
+.cache/
+temp/
+tmp/
+
+# ==========================================
+# Database Files (if using local SQLite)
+# ==========================================
+*.sqlite
+*.db
+
+# ==========================================
+# Package Manager
+# ==========================================
+package-lock.json
+yarn.lock
+.yarn/
+.pnp.*
+
+# ==========================================
+# MacOS
+# ==========================================
+.AppleDouble
+.LSOverride
+Icon
+
+# ==========================================
+# Windows
+# ==========================================
+$RECYCLE.BIN/
+
+# ==========================================
+# Linux
+# ==========================================
+.Trash-*
+.nfs*
+
+# ==========================================
+# Optional: If using Docker
+# ==========================================
+# docker-compose.override.yml
+
+# ==========================================
+# Optional: If using Next.js
+# ==========================================
+# .next/
+# out/
+
+# ==========================================
+# Optional: Sensitive Documentation
+# ==========================================
+# credentials.txt
+# secrets.md
+# private-notes.md
