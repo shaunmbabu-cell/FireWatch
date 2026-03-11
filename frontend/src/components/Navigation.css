@@ -1,0 +1,290 @@
+.navbar {
+  background: var(--dark-card);
+  border-bottom: 2px solid var(--emergency-red);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--light-text);
+  font-weight: 900;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-brand:hover {
+  color: var(--emergency-red);
+  transform: translateY(-2px);
+}
+
+.brand-icon {
+  font-size: 32px;
+  filter: drop-shadow(0 0 8px rgba(211, 47, 47, 0.5));
+}
+
+.brand-text {
+  background: linear-gradient(135deg, var(--emergency-red), var(--warning-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--light-text);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: 'Archivo', sans-serif;
+}
+
+.nav-link:hover {
+  color: var(--emergency-red);
+  background: rgba(211, 47, 47, 0.1);
+}
+
+.btn-nav-primary {
+  background: var(--emergency-red);
+  color: white;
+}
+
+.btn-nav-primary:hover {
+  background: #b71c1c;
+  transform: translateY(-2px);
+}
+
+.btn-nav-secondary {
+  background: var(--dark-bg);
+  border: 1px solid var(--dark-border);
+}
+
+.btn-nav-secondary:hover {
+  border-color: var(--emergency-red);
+}
+
+.nav-user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 8px 16px;
+  background: var(--dark-bg);
+  border-radius: 6px;
+  border: 1px solid var(--dark-border);
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.user-role {
+  font-size: 11px;
+  color: var(--dim-text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .nav-link {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+/* Navigation Bar Spacing Fix - Make buttons smaller and right-aligned */
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem; /* Reduce padding */
+  gap: 3rem; /* Add space between FIREWATCH and navigation */
+}
+
+.nav-brand {
+  /* Don't touch - keep as is */
+  flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem; /* Reduce gap between buttons */
+  margin-left: auto; /* Push to right side */
+  align-items: center;
+}
+
+.nav-link {
+  padding: 0.4rem 0.8rem; /* Reduce button padding */
+  font-size: 0.85rem; /* Reduce font size */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Reduce gap */
+  flex-shrink: 0; /* Prevent user section from shrinking */
+}
+
+.user-name {
+  font-size: 0.85rem; /* Reduce font size */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.btn-logout,
+.btn-login,
+.btn-register {
+  padding: 0.4rem 0.8rem; /* Reduce button padding */
+  font-size: 0.85rem; /* Reduce font size */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Ensure everything fits on one line */
+.navbar {
+  overflow-x: auto; /* Add horizontal scroll if needed */
+}
+/* Navigation bar stays on top */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Highest */
+}
+
+/* Map stays below navbar */
+.leaflet-container {
+  z-index: 1 !important;
+}
+
+/* Popups appear above map but below navbar */
+.leaflet-popup {
+  z-index: 900 !important;
+}
+
+/* Map controls below navbar */
+.leaflet-control {
+  z-index: 800 !important;
+}
+/* ADD THESE RULES TO YOUR EXISTING Navigation.css */
+
+/* Auto-hide navbar on scroll */
+.navbar {
+  position: fixed; /* Change from sticky to fixed */
+  transition: transform 0.3s ease-in-out; /* Add smooth transition */
+}
+
+/* Visible state */
+.navbar-visible {
+  transform: translateY(0);
+}
+
+/* Hidden state */
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+/* Add padding to body to compensate for fixed navbar */
+body {
+  padding-top: 70px; /* Adjust based on your navbar height */
+}
+/* ADD THESE RULES TO YOUR EXISTING Navigation.css */
+
+/* Auto-hide navbar on scroll */
+.navbar {
+  position: fixed; /* Change from sticky to fixed */
+  transition: transform 0.3s ease-in-out; /* Add smooth transition */
+  width: 100%; /* Ensure full width */
+  overflow-x: auto; /* Enable horizontal scroll if needed */
+  overflow-y: hidden; /* Prevent vertical scroll */
+}
+
+/* Visible state */
+.navbar-visible {
+  transform: translateY(0);
+}
+
+/* Hidden state */
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+/* Horizontal scroll for nav-links container */
+.nav-links {
+  overflow-x: auto; /* Enable horizontal scroll */
+  overflow-y: hidden;
+  white-space: nowrap; /* Prevent wrapping */
+  -webkit-overflow-scrolling: touch; /* Smooth scroll on mobile */
+  scrollbar-width: thin; /* Thin scrollbar for Firefox */
+  scrollbar-color: #d64c01 var(--dark-bg);; /* Custom scrollbar colors */
+}
+
+/* Custom scrollbar styling for webkit browsers */
+.nav-links::-webkit-scrollbar {
+  height: 4px; /* Thin horizontal scrollbar */
+}
+
+.nav-links::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+.nav-links::-webkit-scrollbar-thumb {
+  background: #d64c01;
+  border-radius: 2px;
+}
+
+.nav-links::-webkit-scrollbar-thumb:hover {
+  background: var(--warning-orange);
+}
+
+/* Prevent text wrapping in nav links */
+.nav-link {
+  white-space: nowrap;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Add padding to body to compensate for fixed navbar */
+body {
+  padding-top: 70px; /* Adjust based on your navbar height */
+}
+

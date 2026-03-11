@@ -1,0 +1,406 @@
+.fire-stations-page {
+  min-height: 100vh;
+  padding: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.stations-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--emergency-red);
+}
+
+.stations-title {
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+
+.stations-subtitle {
+  color: var(--dim-text);
+  font-size: 14px;
+}
+
+/* Auto-Discovery Section */
+.auto-discovery-card {
+  background: linear-gradient(135deg, rgba(211, 47, 47, 0.1), rgba(245, 124, 0, 0.1));
+  border: 2px solid var(--emergency-red);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.discovery-header {
+  margin-bottom: 20px;
+}
+
+.discovery-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--light-text);
+}
+
+.discovery-subtitle {
+  color: var(--dim-text);
+  font-size: 14px;
+}
+
+.discovery-form {
+  background: var(--dark-card);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.discovery-inputs {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 16px;
+  align-items: end;
+}
+
+.btn-discover {
+  white-space: nowrap;
+  height: fit-content;
+}
+
+/* Discovered Stations */
+.discovered-list {
+  margin-top: 24px;
+  background: var(--dark-card);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.discovered-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.discovered-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--light-text);
+}
+
+.discovered-stations {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.discovered-station-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--dark-bg);
+  border: 1px solid var(--dark-border);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.discovered-station-card:hover {
+  border-color: var(--emergency-red);
+  background: rgba(211, 47, 47, 0.05);
+}
+
+.discovered-station-info {
+  flex: 1;
+}
+
+.discovered-station-info h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--light-text);
+}
+
+.discovered-address,
+.discovered-coords,
+.discovered-phone,
+.discovered-operator {
+  margin: 4px 0;
+  font-size: 13px;
+  color: var(--dim-text);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+.btn-success {
+  background: var(--success-green);
+  color: white;
+  border: none;
+}
+
+.btn-success:hover {
+  background: #388e3c;
+}
+
+/* Form Card */
+.station-form-card {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--light-text);
+}
+
+.station-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.address-search-group {
+  display: flex;
+  gap: 12px;
+}
+
+.address-search-group .form-control {
+  flex: 1;
+}
+
+.form-hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--dim-text);
+  font-style: italic;
+}
+
+/* Stations Grid */
+.stations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.station-card {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.station-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(211, 47, 47, 0.2);
+  border-color: var(--emergency-red);
+}
+
+.station-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.station-card-header h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--light-text);
+}
+
+.btn-icon-delete {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn-icon-delete:hover {
+  background: rgba(211, 47, 47, 0.2);
+  transform: scale(1.1);
+}
+
+.station-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.station-address,
+.station-phone,
+.station-email {
+  font-size: 14px;
+  color: var(--light-text);
+  margin: 0;
+}
+
+.station-address {
+  color: var(--dim-text);
+}
+
+.station-meta {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--dark-border);
+}
+
+.station-meta span {
+  font-size: 13px;
+  color: var(--dim-text);
+  font-weight: 500;
+}
+
+.vehicles-list {
+  margin-top: 12px;
+  padding: 12px;
+  background: var(--dark-bg);
+  border-radius: 6px;
+}
+
+.vehicles-list strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--dim-text);
+}
+
+.vehicles-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.vehicles-list li {
+  background: rgba(211, 47, 47, 0.2);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: var(--light-text);
+}
+
+/* Empty State */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.empty-icon {
+  font-size: 80px;
+  margin-bottom: 24px;
+}
+
+.empty-state h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--light-text);
+}
+
+.empty-state p {
+  color: var(--dim-text);
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fire-stations-page {
+    padding: 16px;
+  }
+
+  .stations-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .stations-title {
+    font-size: 28px;
+  }
+
+  .discovery-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-discover {
+    width: 100%;
+  }
+
+  .discovered-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .discovered-header .btn-success {
+    width: 100%;
+  }
+
+  .discovered-station-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .discovered-station-card .btn {
+    width: 100%;
+  }
+
+  .station-form-card {
+    padding: 20px;
+  }
+
+  .address-search-group {
+    flex-direction: column;
+  }
+
+  .address-search-group .btn {
+    width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .station-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

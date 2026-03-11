@@ -1,0 +1,125 @@
+.manual-entry-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: radial-gradient(circle at top, rgba(211, 47, 47, 0.05), transparent 60%);
+}
+
+.manual-entry-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.entry-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.entry-title {
+  font-size: 42px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, var(--emergency-red), var(--warning-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.entry-subtitle {
+  color: var(--dim-text);
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.logged-by {
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(211, 47, 47, 0.1);
+  border: 1px solid var(--emergency-red);
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--light-text);
+}
+
+.logged-by strong {
+  color: var(--emergency-red);
+}
+
+.entry-form {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.address-search {
+  margin-bottom: 24px;
+}
+
+.search-input-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.search-input-group .form-control {
+  flex: 1;
+}
+
+.search-input-group .btn {
+  white-space: nowrap;
+}
+
+.form-hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--dim-text);
+  font-style: italic;
+}
+
+.form-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--dark-border);
+}
+
+.form-actions .btn {
+  min-width: 150px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .entry-title {
+    font-size: 32px;
+  }
+
+  .entry-form {
+    padding: 24px;
+  }
+
+  .search-input-group {
+    flex-direction: column;
+  }
+
+  .search-input-group .btn {
+    width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+}
